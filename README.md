@@ -1,20 +1,50 @@
-# Gregorian-Calender
-A simple C-based Gregorian Calendar Generator by Team Segmentation Fault. It takes user input for year and month (or all months) and displays the calendar with correct leap year handling and weekday calculation. Useful for scheduling and planning, it includes test cases for accuracy and edge case validation.
+# Gregorian Calendar Generator
 
-Sure! Here's the GitHub project description in paragraph format, suitable for your `README.md` or project overview section:
+This is a simple C-based console application that displays the Gregorian calendar for a specific month or the entire year. The program is designed to help users easily visualize monthly calendars in a structured, readable format directly in the terminal.
 
----
+## Overview
 
-This project is a console-based **Gregorian Calendar Generator** developed in the C programming language as part of a bootcamp on *Critical Thinking & Problem Solving*. Created by the team **Segmentation Fault**, the program allows users to generate a calendar view for a specific month or the entire year based on the Gregorian calendar system. It includes core functionalities such as leap year detection, month-wise day calculation, and accurate determination of the day of the week for any given date. The application uses a reference epoch year (1970) to compute total elapsed days and outputs the calendar layout accordingly.
+The application prompts the user to input a year and either a specific month (1–12) or an option to display all 12 months of that year. It accurately calculates leap years to determine the correct number of days in February and uses logical date computation to find the starting day of the week for any given month. The output is a neatly formatted calendar grid that reflects the actual layout of days and dates for the selected time period.
 
-The primary goal of this project is to help users efficiently plan and organize their schedules by providing an accurate and easy-to-use calendar interface via the terminal. Users can input a specific year and either choose a particular month (1–12) or select "ALL" to view all twelve months of that year. The application handles edge cases like invalid year or month inputs, ensuring a user-friendly experience.
+## Features
 
-The Gregorian Calendar Generator finds application in various domains such as personal planning, academic scheduling, professional task management, travel coordination, health tracking, and even financial organization. It supports both short-term and long-term planning needs. The codebase is implemented entirely in C without any external libraries, emphasizing fundamental programming logic and date computation techniques.
+* View calendar for a specific month or full year
+* Accurate leap year detection
+* Day-of-week calculation
+* Input validation and edge case handling
+* Lightweight and runs fully in terminal
+* No external libraries required
 
-A comprehensive set of test cases is included to validate correct behavior, such as leap year handling (e.g., 2020 as a leap year and 2100 as not), month length accuracy, and correct identification of the day of the week. Invalid input scenarios are also tested to ensure robust performance.
+## How to Run
 
-The project was collaboratively developed by the team members Nandini Hegde, Marushka Rachelle D’silva, Nischal K, Riyaz K, Sujal Revankar, Vikas M, and Yashita Vasu. This tool serves as a useful command-line utility for any user who wishes to view or plan their schedule using a custom-built, lightweight calendar system in C.
+1. Compile the program:
+   `gcc calendar.c -o calendar`
 
----
+2. Run the program:
+   `./calendar`
 
-Let me know if you want this saved as a `README.md` file or formatted for GitHub display.
+3. Input the desired year (e.g., 2024)
+
+4. Input a month number (1–12) or `0` to display all months
+
+## Example
+
+```
+Enter Year = 2024  
+Enter Month (1-12 or 'ALL') = 0
+```
+
+This will display calendars for all months of the year 2024.
+
+## Sample Test Cases
+
+* Year: 2020 → February has 29 days
+* Year: 2100 → February has 28 days
+* Month: 13 → Shows "Invalid Month" message
+* Year: -100 → Shows "Invalid Year" message
+* Date: 25/12/2023 → Outputs "Monday"
+* Month: 0 → Displays full calendar for the year
+
+## License
+
+This project is intended for educational use. Feel free to explore, modify, and reuse it as needed.
